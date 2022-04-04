@@ -3,8 +3,10 @@
     "version": "0.2.0",
     "private": true,
     "scripts": {
-        "develop": "npm install && webpack serve -c webpack-development.js",
-        "build": "npm install && webpack -c webpack-production.js && cp CNAME docs/"
+        "build-dev": "webpack serve -c webpack-development.js",
+        "dev": "npm install && npm run build-dev",
+        "build": "webpack -c webpack-production.js && cp public/CNAME docs/ && cp public/404.html docs/",
+        "prod": "npm install && npm run build"
     },
     "dependencies": {
         "@element-plus/icons-vue": "^0.2.7",

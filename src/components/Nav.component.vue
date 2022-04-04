@@ -19,7 +19,7 @@
       <ul class="flex items-center">
         <li class="pr-6">
           <button>
-            <router-link to="/help"><h1 class="pl-8 lg:pl-0 text-gray-700">Help</h1></router-link>
+            <router-link to="/about"><h1 class="pl-8 lg:pl-0 text-gray-700">About</h1></router-link>
           </button>
         </li>
       </ul>
