@@ -9,16 +9,16 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
 
 const config = {
-    ui: {publicPath: 'http://localhost:9090', title: 'LDaCA'}
+    ui: {publicPath: 'https://www.ldaca.edu.au', title: 'LDaCA'}
 }
 
 module.exports = {
     target: "web",
     entry: ["./src/main.js"],
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "docs"),
         filename: "[contenthash].js",
-        publicPath: config['ui']['publicPath'] || "http://localhost:9090/",
+        publicPath: config['ui']['publicPath'] || "http://localhost:9090",
     },
     plugins: [
         new webpack.DefinePlugin({
