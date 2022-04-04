@@ -9,8 +9,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const webpack = require('webpack');
 
 const LAUNCH_COMMAND = process.env.npm_lifecycle_event;
-console.log(`Launch Command used: ` + LAUNCH_COMMAND);
-const isProduction = LAUNCH_COMMAND;
+
+const isProduction = !!(LAUNCH_COMMAND === 'prod' || LAUNCH_COMMAND === 'build');
+console.log(`Launch Command used: ` + LAUNCH_COMMAND + ' Is production? ' + isProduction);
 // Use prod npm to build so it can use the publicPath desired
 
 const config = {
@@ -23,7 +24,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, "docs"),
         filename: "[contenthash].js",
-        publicPath: isProduction === 'prod' || 'build' ? config['ui']['publicPath'] : "http://localhost:9090",
+        publicPath: isProduction ? config['ui']['publicPath'] : "http://localhost:9090",
     },
     plugins: [
         new webpack.DefinePlugin({
