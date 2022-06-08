@@ -5,7 +5,7 @@
     "scripts": {
         "build-dev": "webpack serve -c webpack-development.js",
         "dev": "npm install && npm run build-dev",
-        "build": "webpack -c webpack-production.js && cp public/CNAME docs/ && cp public/404.html docs/",
+        "build": "webpack -c webpack-production.js && cp public/404.html docs/ && cp public/CNAME docs/",
         "prod": "npm install && npm run build"
     },
     "dependencies": {
