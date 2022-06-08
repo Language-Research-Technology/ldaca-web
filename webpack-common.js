@@ -15,7 +15,7 @@ console.log(`Launch Command used: ` + LAUNCH_COMMAND + ' Is production? ' + isPr
 // Use prod npm to build so it can use the publicPath desired
 
 const config = {
-    ui: {publicPath: 'https://www.ldaca.edu.au', title: 'LDaCA'}
+    ui: {publicPath: 'https://language-research-technology.github.io/ldaca-web/', title: 'LDaCA'}
 }
 
 module.exports = {
